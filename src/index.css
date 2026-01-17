@@ -1,9 +1,9 @@
-@font-face {
+/* @font-face {
   font-family: "Chicken Rice";
   src: url("./assets/fonts/Chicken Rice.otf") format ("opentype");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 body {
   margin: 0;
@@ -84,14 +84,14 @@ code {
 /* Title + description */
 .projectName {
   margin: 0 0 10px 0;
-  font-size: 50px;
+  font-size: 32px;
   color: rgb(0, 0, 0);
   font-family: 'Zoi', sans-serif;
 }
 
 .projectDesc {
   margin: 0 0 18px 0;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -122,5 +122,39 @@ code {
   .projectsTitle {
     font-size: 48px;
     font-family: "Zoi", sans-serif;
+  }
+}
+
+/* ===== Mobile: About section should STACK, not split ===== */
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    height: auto;              /* let it flow */
+  }
+
+  .aboutImage {
+    justify-content: center;
+    align-items: center;
+    padding: 18px 18px 6px;
+  }
+
+  /* keep image from taking over the screen */
+  .aboutImage img {
+    width: min(92vw, 520px);
+    height: auto;
+    max-height: 44vh;          /* prevents "colliding" with text */
+    object-fit: contain;
+  }
+
+  .aboutText {
+    padding: 10px 22px 28px;
+    justify-content: flex-start; /* don't vertically center on mobile */
+    align-items: flex-start;
+  }
+
+  /* add breathing room between image and heading */
+  .brandName {
+    margin-top: 10px;
   }
 }

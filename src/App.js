@@ -45,7 +45,7 @@ export default function App() {
       title: "MediTrack (HackMIT 2025)",
       description:
         "Hospital inventory management dashboard built at HackMIT 2025 to track medical supplies, forecast demand, and reduce shortages.",
-      tags: ["React", "Python", "Machine Learning", ],
+      tags: ["Python", "Machine Learning", "React"],
       // link: "https://github.com/your-link-here",
       // icon: "🏥",
     },
@@ -53,7 +53,7 @@ export default function App() {
       title: "Nurgent (Congressional App Challenge Winner)",
       description:
         "NYC public restroom locator app built with Flutter (cross-platform), backed by Firebase, and integrated with the Google Maps API for real-time location search.",
-      tags: ["Flutter", "Firebase", "App Development", "Google Maps API"],
+      tags: ["Flutter", "App Development","Firebase", "Google Maps API"],
       link: "https://www.congressionalappchallenge.us/23-ny06/",
       // icon: "📍",
     },
