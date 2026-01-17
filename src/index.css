@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Chicken Rice";
+  src: url("./assets/fonts/Chicken Rice.otf") format ("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +17,110 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* Projects header */
+.projectsHeader {
+  margin-bottom: 28px;
+}
+
+.projectsTitle {
+  margin: 0;
+  font-size: 64px;
+  letter-spacing: 0.06em;
+  font-family: "Zoi", sans-serif;
+}
+
+.projectsSubtitle {
+  margin: 8px 0 0 0;
+  font-size: 22px;
+  opacity: 0.7;
+}
+
+/* Grid */
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+  
+}
+
+/* Card */
+.projectCard {
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Inter", system-ui, sans-serif;
+
+
+  background: #ffffff;
+  border: 3px solid rgba(34, 34, 34, 0.1);
+  border-radius: 12px;
+
+  padding: 28px;
+  min-height: 320px;
+  /* max-width: 700px; */
+
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(44, 41, 41, 0.25);
+}
+
+/* Icon */
+.projectIcon {
+  font-size: 44px;
+  margin-bottom: 18px;
+  opacity: 0.95;
+}
+
+/* Title + description */
+.projectName {
+  margin: 0 0 10px 0;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+  font-family: 'Zoi', sans-serif;
+}
+
+.projectDesc {
+  margin: 0 0 18px 0;
+  font-size: 24px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Tags */
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.tagPill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive: stack to 1 column on small screens */
+@media (max-width: 800px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectsTitle {
+    font-size: 48px;
+    font-family: "Zoi", sans-serif;
+  }
 }

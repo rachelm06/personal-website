@@ -1,0 +1,159 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /* src/App.css */
+  
+  @font-face {
+    font-family: "Zoi";
+    src: url("./assets/fonts/Zoi-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .navInner {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+  }
+  
+  .brandName {
+    font-family: "Zoi", sans-serif;
+    font-size: 32px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 4px;
+  }
+  
+  .snapContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    /* navbar offset */
+    padding-top: 64px;
+    box-sizing: border-box;
+  }
+  
+  /* .snapSection {
+    height: calc(100vh - 64px);
+    scroll-snap-align: start;
+    display: flex;
+  } */
+  .snapSection {
+    height: 100vh;
+    scroll-snap-align: start;
+    padding-top: 64px; /* navbar height */
+  }
+  
+  .sectionInner {
+    padding: 48px 24px;
+  }
+  
+  /* .aboutGrid {
+    height: calc(100vh - 64px); /* adjust if navbar height differs */
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;
+  /*} */
+  
+  .aboutGrid {
+    height: calc(100vh - 64px); /* EXACTLY viewport minus navbar */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden; /* prevents huge image from spilling */
+  }
+  
+  LEFT IMAGE */
+  .aboutImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    align-items: center;
+    /* object-fit: cover; */
+  }
+  .aboutImage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* RIGHT TEXT */
+  .aboutText {
+    display: flex;
+    align-items: center;     /* vertical centering */
+    justify-content: center; /* horizontal centering */
+    padding: 40px;
+  }
+  
+  .textInner {
+    max-width: 480px;
+  }
+  
+  /* Optional typography polish */
+  .textInner p {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
+  
+  

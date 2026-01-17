@@ -36,3 +36,135 @@
     transform: rotate(360deg);
   }
 }
+/* src/App.css */
+
+@font-face {
+  font-family: "Zoi";
+  src: url("./assets/fonts/Zoi-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 10;
+  border-bottom: 1px solid black;
+}
+
+.navInner {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+}
+
+.brandName {
+  font-family: "Zoi", sans-serif;
+  font-size: 64px;
+  text-decoration: none;
+  color: black;
+}
+
+.navLinks {
+  display: flex;
+  gap: 16px;
+  font-size: 40px;
+  font-family: 'Zoi', sans-serif;
+  justify-content: center;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 4px;
+}
+
+.snapContainer {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  /* navbar offset */
+  padding-top: 64px;
+  box-sizing: border-box;
+}
+
+/* .snapSection {
+  height: calc(100vh - 64px);
+  scroll-snap-align: start;
+  display: flex;
+} */
+
+.snapSection {
+  height: 100vh;
+  padding-top: 64px; /* navbar height */
+}
+
+.sectionInner {
+  padding: 48px 24px;
+}
+
+.aboutGrid {
+  height: calc(100vh - 64px); /* adjust if navbar height differs */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* LEFT IMAGE */
+.aboutImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutImage img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+/* RIGHT TEXT */
+.aboutText {
+  display: flex;
+  align-items: center;     /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  padding: 40px;
+  font-size: large;
+}
+
+
+.textInner {
+  max-width: 700px;
+  text-align: left;
+  font-size: medium;
+}
+
+/* Optional typography polish */
+.textInner p {
+  line-height: 1.6;
+  font-size: 1.7rem;
+  /* width: min(520px, 85%); */
+
+}
+
+.contact {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+  }
+}
