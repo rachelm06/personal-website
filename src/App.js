@@ -32,7 +32,23 @@ export default function App() {
   const projectsVisible = useIsVisible(projectsRef);
 
   const PROJECTS = [
-    
+
+    {
+      title: "GPU Optimization for Optimal Power Flow (Ongoing)",
+      description:
+        "Part of the Shin Group at MIT ChemE in collaboration with GE Vernova.",
+      tags: ["Julia", "Nonlinear Optimization", "GPU Computing", "Research"],
+      // link: "https://github.com/your-link-here",
+      // icon: "⚡",
+    },
+    {
+      title: "StataNav",
+      description:
+        "Computer vision based navigation for MIT's Stata Center, helping people find their way through the building's famously confusing layout.",
+      tags: ["Computer Vision", "PyTorch", "Research"],
+      // link: "https://github.com/your-link-here",
+      // icon: "🧭",
+    },
     {
       title: "Wildfire Smoke Detection (Ongoing: Paper in Progress)",
       description:
@@ -111,11 +127,11 @@ export default function App() {
       <div className="textInner">
         <h1 className="brandName">HI, I'M RACHEL!</h1>
         <p>
-          I'm currently a sophomore at MIT studying Computer Science, passionate
-          about applying CS and machine learning to solve real-world problems.
-          When I'm not doing schoolwork or working on projects, you'll probably
-          find me hopping between new restaurants and cafes (all ranked on Beli!),
-          sketching, or stopping mid-scroll to admire french bulldogs on my phone.
+          I'm currently a junior at MIT studying Computer Science and Artificial
+          Intelligence, passionate about applying CS and machine learning to
+          solve real-world problems. When I'm not doing schoolwork or working on
+          projects, you'll probably find me hopping between new restaurants and
+          cafes, sketching, or dancing.
         </p>
         <div className = "contact">
           <a href="mailto:rachelwu@mit.edu">
